@@ -26,4 +26,24 @@ public class AppTest {
         App classUnderTest = new App();
         assertEquals(-12, classUnderTest.addition(-9,-3));
     }
+
+    @Test public void testAppSubtractionPosPos() {
+        App classUnderTest = new App();
+        assertEquals(1, classUnderTest.subtraction(8, 7));
+    }
+
+    @Test public void testAppSubtractionPosNeg() {
+        App classUnderTest = new App();
+        assertEquals(17, classUnderTest.subtraction(7, -10));
+    }
+
+    @Test public void testAppSubtractionNegPos() {
+        App classUnderTest = new App();
+        assertEquals(-17, classUnderTest.subtraction(-10, 7));
+    }
+
+    @Test public void testAppSubtractionNegNeg() {
+        App classUnderTest = new App();
+        assertEquals(-6, classUnderTest.subtraction(-9, -3));
+    }
 }
