@@ -11,4 +11,19 @@ public class AppTest {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
+
+    @Test public void testAppAdditionPosPos() {
+        App classUnderTest = new App();
+        assertEquals(15, classUnderTest.addition(8,7));
+    }
+
+    @Test public void testAppAdditionPosNeg() {
+        App classUnderTest = new App();
+        assertEquals(-3, classUnderTest.addition(7,-10));
+    }
+
+    @Test public void testAppAdditionNegNeg() {
+        App classUnderTest = new App();
+        assertEquals(-12, classUnderTest.addition(-9,-3));
+    }
 }
