@@ -5,6 +5,7 @@ package ristekCalculator;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.jupiter.api.Assertions;
 
 public class AppTest {
     @Test public void testAppHasAGreeting() {
@@ -70,5 +71,35 @@ public class AppTest {
     @Test public void testAppMultiplicationWithZero() {
         App classUnderTest = new App();
         assertEquals(0, classUnderTest.multiplication(0, 100));
+    }
+
+    @Test public void testAppDivisionPosPos() {
+        App classUnderTest = new App();
+        assertEquals(3, classUnderTest.division(9, 3));
+    }
+
+    @Test public void testAppDivisionPosNeg() {
+        App classUnderTest = new App();
+        assertEquals(-3, classUnderTest.division(9, -3));
+    }
+
+    @Test public void testAppDivisionNegPos() {
+        App classUnderTest = new App();
+        assertEquals(-3, classUnderTest.division(-9, 3));
+    }
+
+    @Test public void testAppDivisionNegNeg() {
+        App classUnderTest = new App();
+        assertEquals(3, classUnderTest.division(-9, -3));
+    }
+
+    @Test public void testAppDivisionIfNumeratorIsZero() {
+        App classUnderTest = new App();
+        assertEquals(0, classUnderTest.division(0, 3));
+    }
+
+    @Test public void testAppDivisionIfDenumeratorIsZero() {
+        App classUnderTest = new App();
+        assertThrows(ArithmeticException.class, classUnderTest.division(3, 0));
     }
 }
