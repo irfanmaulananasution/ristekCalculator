@@ -46,4 +46,29 @@ public class AppTest {
         App classUnderTest = new App();
         assertEquals(-6, classUnderTest.subtraction(-9, -3));
     }
+
+    @Test public void testAppMultiplicationPosPos() {
+        App classUnderTest = new App();
+        assertEquals(27, classUnderTest.multiplication(9, 3));
+    }
+
+    @Test public void testAppMultiplicationNegNeg() {
+        App classUnderTest = new App();
+        assertEquals(27, classUnderTest.multiplication(-9, -3));
+    }
+
+    @Test public void testAppMultiplicationPosNeg() {
+        App classUnderTest = new App();
+        assertEquals(-27, classUnderTest.multiplication(9, -3));
+    }
+
+    @Test public void testAppMultiplicationNegPos() {
+        App classUnderTest = new App();
+        assertEquals(-27, classUnderTest.multiplication(-9, 3));
+    }
+
+    @Test public void testAppMultiplicationWithZero() {
+        App classUnderTest = new App();
+        assertEquals(0, classUnderTest.multiplication(0, 100));
+    }
 }
