@@ -5,8 +5,6 @@ package ristekCalculator;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
 import org.junit.jupiter.api.Assertions;
 
 public class AppTest {
